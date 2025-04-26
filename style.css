@@ -1,0 +1,113 @@
+body {
+background-color: #000;
+color: #fff;
+font-family: 'Inter', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Orbitron', sans-serif;
+}
+.glassmorphism {
+background: rgba(30, 30, 30, 0.15);
+backdrop-filter: blur(10px);
+border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.neumorphic {
+background: linear-gradient(145deg, rgba(30, 30, 30, 0.4), rgba(10, 10, 10, 0.4));
+box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.03);
+}
+.text-gradient {
+background: linear-gradient(90deg, #1E90FF, #8A2BE2);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.btn-glow:hover {
+box-shadow: 0 0 15px #1E90FF;
+transform: translateY(-2px);
+}
+.card-hover:hover {
+transform: translateY(-5px);
+box-shadow: 0 0 20px rgba(30, 144, 255, 0.4);
+}
+.neon-border {
+border: 1px solid rgba(30, 144, 255, 0.3);
+}
+.neon-border:focus {
+border-color: #1E90FF;
+box-shadow: 0 0 8px rgba(30, 144, 255, 0.6);
+}
+.logo-slider {
+animation: slide 20s linear infinite;
+}
+@keyframes slide {
+0% { transform: translateX(0); }
+100% { transform: translateX(-100%); }
+}
+.counter-animation {
+animation: countUp 2.5s ease-out forwards;
+}
+@keyframes countUp {
+from { opacity: 0; transform: translateY(20px); }
+to { opacity: 1; transform: translateY(0); }
+}
+.nav-link {
+position: relative;
+}
+.nav-link::after {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+bottom: -2px;
+left: 0;
+background: linear-gradient(90deg, #1E90FF, #8A2BE2);
+transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+width: 100%;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+.percentage-animation {
+display: inline-flex;
+align-items: baseline;
+}
+.percentage-symbol {
+margin-left: 2px;
+background: linear-gradient(90deg, #1E90FF, #8A2BE2);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+opacity: 0;
+transform: translateY(10px);
+animation: fadeInUp 0.5s ease-out forwards;
+animation-delay: 1s;
+}
+@keyframes fadeInUp {
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+.alert {
+padding: 1rem;
+margin-bottom: 1rem;
+border-radius: 0.5rem;
+display: none;
+}
+.alert-success {
+background-color: rgba(16, 185, 129, 0.1);
+border: 1px solid #10B981;
+color: #10B981;
+}
+.alert-error {
+background-color: rgba(239, 68, 68, 0.1);
+border: 1px solid #EF4444;
+color: #EF4444;
+}
+.portfolio-card:hover {
+    box-shadow: 0 0px 25px rgba(138, 43, 226, 0.5);
+}

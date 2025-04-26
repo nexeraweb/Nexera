@@ -1,0 +1,377 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="images/logo.png">
+<title>Nexera - Driving the Future of Digital Transformation</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#1E90FF',secondary:'#8A2BE2'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/3c566b1fe9.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen">
+<!-- Header -->
+<header class="fixed top-0 left-0 right-0 z-50 glassmorphism">
+<div class="container mx-auto px-6 py-2 flex justify-between items-center">
+<div class="flex items-center gap-2">
+    <div>
+        <img src="images/logo.png" alt="Nexera Logo" class="w-16 h-16 object-contain">
+    </div>
+</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a href="#home" class="nav-link text-white hover:text-primary transition-colors duration-300">Home</a>
+<a href="#achievements" class="nav-link text-white hover:text-primary transition-colors duration-300">Achievements</a>
+<a href="#services" class="nav-link text-white hover:text-primary transition-colors duration-300">Services</a>
+<a href="#portfolio" class="nav-link text-white hover:text-primary transition-colors duration-300">Portfolio</a>
+<a href="#contact" class="nav-link text-white hover:text-primary transition-colors duration-300">Contact</a>
+</nav>
+<button onclick="showMobileMenu()" class="md:hidden w-10 h-10 flex items-center justify-center text-white">
+<i class="fa-solid fa-bars text-lg"></i>
+</button>
+</div>
+</header>
+
+<!-- Mobile Menu Modal -->
+<div id="mobileMenuModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+<div class="glassmorphism rounded-lg w-[90%] max-w-md mx-4">
+<div class="p-6">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-2xl font-bold text-gradient">Menu</h3>
+<button onclick="closeMobileMenu()" class="text-gray-400 hover:text-white">
+<i class="fa-solid fa-xmark text-2xl"></i>
+</button>
+</div>
+<nav class="flex flex-col space-y-4">
+<a href="#home" onclick="handleMobileMenuClick(event)" class="text-white hover:text-primary transition-colors duration-300 text-lg">Home</a>
+<a href="#achievements" onclick="handleMobileMenuClick(event)" class="text-white hover:text-primary transition-colors duration-300 text-lg">Achievements</a>
+<a href="#services" onclick="handleMobileMenuClick(event)" class="text-white hover:text-primary transition-colors duration-300 text-lg">Services</a>
+<a href="#portfolio" onclick="handleMobileMenuClick(event)" class="text-white hover:text-primary transition-colors duration-300 text-lg">Portfolio</a>
+<a href="#contact" onclick="handleMobileMenuClick(event)" class="text-white hover:text-primary transition-colors duration-300 text-lg">Contact</a>
+</nav>
+</div>
+</div>
+</div>
+
+<!-- Hero Section -->
+<section id="home" class="relative min-h-screen flex items-center justify-center pt-20" style="background-image: url('images/bg.jpg'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-black bg-opacity-50"></div>
+<div class="container mx-auto px-6 z-10">
+<div class="flex flex-col md:flex-row items-center">
+<div class="w-full md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-relaxed">
+We are <span class="text-gradient">Nexera</span> Driving the Future of Digital Transformation
+</h1>
+<p class="text-lg text-gray-300 mb-8 max-w-xl">
+Empowering businesses with cutting-edge technology solutions to thrive in the digital era. Transform your vision into reality with our expertise.
+</p>
+<button onclick="scrollToContact()" class="bg-primary hover:bg-secondary text-white font-semibold py-3 px-8 !rounded-button transition-all duration-300 btn-glow whitespace-nowrap">
+Get Started
+</button>
+</div>
+<div class="w-full md:w-1/2">
+<!-- Hero section right side intentionally left empty as per design requirements -->
+</div>
+</div>
+</div>
+</section>
+<!-- Achievements Section -->
+<section id="achievements" class="py-20 bg-black">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">About <span class="text-gradient">Nexera</span></h2>
+<p class="text-gray-400 max-w-2xl mx-auto">Our track record speaks for itself. We've helped businesses across industries achieve remarkable results through digital innovation.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="neumorphic rounded-lg p-8 text-center transition-all duration-300 card-hover">
+<div class="w-16 h-16 flex items-center justify-center mx-auto mb-6 bg-gradient-to-r from-primary to-secondary rounded-full">
+<i class="fa-solid fa-chart-line text-xl text-white"></i>
+</div>
+<h3 class="text-5xl font-bold mb-2 percentage-animation">
+<span class="counter-animation text-white">46</span>
+<span class="percentage-symbol">%</span>
+</h3>
+<p class="text-gray-300">Business growth for our clients</p>
+</div>
+<div class="neumorphic rounded-lg p-8 text-center transition-all duration-300 card-hover">
+<div class="w-16 h-16 flex items-center justify-center mx-auto mb-6 bg-gradient-to-r from-primary to-secondary rounded-full">
+<i class="fa-solid fa-code text-xl text-white"></i>
+</div>
+<h3 class="text-5xl font-bold mb-2 counter-animation text-white">41</h3>
+<p class="text-gray-300">Websites successfully launched</p>
+</div>
+<div class="neumorphic rounded-lg p-8 text-center transition-all duration-300 card-hover">
+<div class="w-16 h-16 flex items-center justify-center mx-auto mb-6 bg-gradient-to-r from-primary to-secondary rounded-full">
+<i class="fa-solid fa-face-smile text-xl text-white"></i>
+</div>
+<h3 class="text-5xl font-bold mb-2 counter-animation text-white">25</h3>
+<p class="text-gray-300">Satisfied clients worldwide</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section id="services" class="py-20 bg-black">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Why Work With <span class="text-gradient">Nexera</span></h2>
+<p class="text-gray-400 max-w-2xl mx-auto">We deliver comprehensive digital solutions tailored to your unique business needs.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="glassmorphism rounded-lg p-8 transition-all duration-300 card-hover">
+<div class="w-14 h-14 flex items-center justify-center mb-6 bg-gradient-to-r from-primary to-secondary rounded-full">
+<i class="fa-solid fa-magnifying-glass text-xl text-white"></i>
+</div>
+<h3 class="text-xl font-bold mb-3 text-white">SEO Optimization</h3>
+<p class="text-gray-300">Boost your online visibility with our advanced SEO strategies. We help your business rank higher in search results, driving organic traffic and increasing conversions.</p>
+</div>
+<div class="glassmorphism rounded-lg p-8 transition-all duration-300 card-hover">
+<div class="w-14 h-14 flex items-center justify-center mb-6 bg-gradient-to-r from-primary to-secondary rounded-full">
+<i class="fa-solid fa-rocket text-xl text-white"></i>
+</div>
+<h3 class="text-xl font-bold mb-3 text-white">Fast Deployment</h3>
+<p class="text-gray-300">Time is money. Our streamlined development process ensures quick turnaround times without compromising on quality, getting your digital assets live faster.</p>
+</div>
+<div class="glassmorphism rounded-lg p-8 transition-all duration-300 card-hover">
+<div class="w-14 h-14 flex items-center justify-center mb-6 bg-gradient-to-r from-primary to-secondary rounded-full">
+<i class="fa-solid fa-palette text-xl text-white"></i>
+</div>
+<h3 class="text-xl font-bold mb-3 text-white">Brand-Aligned Design</h3>
+<p class="text-gray-300">We create stunning, cohesive visual experiences that perfectly reflect your brand identity across all digital touchpoints, enhancing recognition and trust.</p>
+</div>
+<div class="glassmorphism rounded-lg p-8 transition-all duration-300 card-hover">
+<div class="w-14 h-14 flex items-center justify-center mb-6 bg-gradient-to-r from-primary to-secondary rounded-full">
+<i class="fa-solid fa-mobile-screen text-xl text-white"></i>
+</div>
+<h3 class="text-xl font-bold mb-3 text-white">Cross-Platform Support</h3>
+<p class="text-gray-300">Reach your audience wherever they are. Our solutions work flawlessly across all devices and platforms, providing a consistent user experience.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Section -->
+<section id="portfolio" class="py-20 bg-black">
+    <div class="container mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">What We <span class="text-gradient">Created</span></h2>
+            <p class="text-gray-400 max-w-2xl mx-auto">Explore our portfolio of successful projects for industry-leading clients.</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8">
+            <div class="glassmorphism portfolio-card rounded-lg p-6 transform hover:scale-105 transition-all duration-300 group">
+                <div class="text-center">
+                    <div class="w-30 h-30 mx-auto mb-4 flex items-center justify-center">
+                        <img src="images/img1.png">
+                    </div>
+                    <p class="text-white font-medium text-sm sm:text-base group-hover:text-secondary transition-colors duration-300">Krebawy Restaurant</p>
+                </div>
+            </div>
+            <div class="glassmorphism portfolio-card rounded-lg p-6 transform hover:scale-105 transition-all duration-300 group">
+                <div class="text-center">
+                    <div class="w-30 h-30 mx-auto mb-4 flex items-center justify-center">
+                        <img src="images/img2.png">
+                    </div>
+                    <p class="text-white font-medium text-sm sm:text-base group-hover:text-secondary transition-colors duration-300">Profit GYM</p>
+                </div>
+            </div>
+            <div class="glassmorphism portfolio-card rounded-lg p-6 transform hover:scale-105 transition-all duration-300 group">
+                <div class="text-center">
+                    <div class="w-30 h-30 mx-auto mb-4 flex items-center justify-center">
+                        <img src="images/img3.png">
+                    </div>
+                    <p class="text-white font-medium text-sm sm:text-base group-hover:text-secondary transition-colors duration-300">On Style</p>
+                </div>
+            </div>
+            <div class="glassmorphism portfolio-card rounded-lg p-6 transform hover:scale-105 transition-all duration-300 group">
+                <div class="text-center">
+                    <div class="w-30 h-30 mx-auto mb-4 flex items-center justify-center">
+                        <img src="images/img4.png">
+                    </div>
+                    <p class="text-white font-medium text-sm sm:text-base group-hover:text-secondary transition-colors duration-300">Martin Juice</p>
+                </div>
+            </div>
+            <div class="glassmorphism portfolio-card rounded-lg p-6 transform hover:scale-105 transition-all duration-300 group">
+                <div class="text-center">
+                    <div class="w-30 h-30 mx-auto mb-4 flex items-center justify-center">
+                        <img src="images/img5.png">
+                    </div>
+                    <p class="text-white font-medium text-sm sm:text-base group-hover:text-secondary transition-colors duration-300">Beka Store</p>
+                </div>
+            </div>
+            <div class="glassmorphism portfolio-card rounded-lg p-6 transform hover:scale-105 transition-all duration-300 group">
+                <div class="text-center">
+                    <div class="w-30 h-30 mx-auto mb-4 flex items-center justify-center">
+                        <img src="images/img6.png">
+                    </div>
+                    <p class="text-white font-medium text-sm sm:text-base group-hover:text-secondary transition-colors duration-300">Bean Heaven Cafe</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-black">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Get In <span class="text-gradient">Touch</span></h2>
+<p class="text-gray-400 max-w-2xl mx-auto">Ready to transform your digital presence? Let's start a conversation about your project.</p>
+</div>
+<div class="flex flex-col md:flex-row gap-12">
+<div class="w-full md:w-1/2">
+<form id="contactForm" class="space-y-6" action="https://formspree.io/f/xrbqgyqg" method="POST">
+    <div>
+        <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
+        <input type="text" id="name" name="Name" required minlength="2" maxlength="50" class="w-full bg-transparent neon-border focus:outline-none p-3 rounded text-white" placeholder="John Anderson">
+    </div>
+    <div>
+        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+        <input type="email" id="email" name="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="w-full bg-transparent neon-border focus:outline-none p-3 rounded text-white" placeholder="john.anderson@example.com">
+    </div>
+    <div>
+        <label for="instagram" class="block text-sm font-medium text-gray-300 mb-2">Instagram</label>
+        <input type="text" id="instagram" name="Instagram" required class="w-full bg-transparent neon-border focus:outline-none p-3 rounded text-white" placeholder="@yourhandle">
+    </div>
+    <div class="wrapper">
+        <label for="budget" class="block text-sm font-medium text-gray-300 mb-2">Your Budget</label>
+        <input type="number" id="budget" name="Budget" min="0" class="w-full bg-transparent neon-border focus:outline-none p-3 rounded text-white" placeholder="Enter your budget">
+    </div>
+    <div>
+        <label for="project" class="block text-sm font-medium text-gray-300 mb-2">Project Idea</label>
+        <textarea id="project" name="Message" rows="4" required minlength="10" maxlength="1000" class="w-full bg-transparent neon-border focus:outline-none p-3 rounded text-white" placeholder="Tell us about your project..."></textarea>
+    </div>
+    <button type="submit" name="submitContact" class="bg-gradient-to-r from-primary to-secondary text-white font-semibold py-3 px-8 !rounded-button transition-all duration-300 btn-glow whitespace-nowrap">
+        Send Message
+    </button>
+</form>
+</div>
+<div class="w-full md:w-1/2">
+<div class="glassmorphism rounded-lg p-8" style="height: 532px;">
+<h3 class="text-2xl font-bold mb-6 text-gradient">Contact Information</h3>
+<div class="space-y-6">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center mr-4 bg-gradient-to-r from-primary to-secondary rounded-full flex-shrink-0">
+<i class="fa-solid fa-envelope text-white"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-white">Email Us</h4>
+<a href="mailto:nexera.works@gmail.com" class="text-gray-300 text-gray-400 hover:text-primary transition-colors duration-300">nexera.works@gmail.com</a>
+<p class="text-gray-400 text-sm mt-1">We'll respond within 24 hours</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center mr-4 bg-gradient-to-r from-primary to-secondary rounded-full flex-shrink-0">
+<i class="fa-solid fa-phone text-white"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-white">Call Us</h4>
+<a href="https://wa.me/201553763698" class="text-gray-300 text-gray-400 hover:text-primary transition-colors duration-300">+201553763698</a>
+<p class="text-gray-400 text-sm mt-1">Available 24/7 for urgent inquiries</p>
+</div>
+</div>
+<div class="pt-6">
+<h4 class="text-lg font-medium text-white mb-4">Connect With Us</h4>
+<div class="flex space-x-4">
+<a href="https://instagram.com/nexera.web/" target="_blank" class="w-10 h-10 flex items-center justify-center bg-transparent border border-gray-600 rounded-full hover:border-primary transition-colors duration-300">
+<i class="fa-brands fa-instagram text-white"></i>
+</a>
+<a href="https://tiktok.com/@nexera.official" target="_blank" class="w-10 h-10 flex items-center justify-center bg-transparent border border-gray-600 rounded-full hover:border-primary transition-colors duration-300">
+<i class="fa-brands fa-tiktok text-white"></i>
+</a>
+<a href="https://wa.me/201553763698" target="_blank" class="w-10 h-10 flex items-center justify-center bg-transparent border border-gray-600 rounded-full hover:border-primary transition-colors duration-300">
+<i class="fa-brands fa-whatsapp text-white"></i>
+</a>
+<a href="mailto:nexera.works@gmail.com" class="w-10 h-10 flex items-center justify-center bg-transparent border border-gray-600 rounded-full hover:border-primary transition-colors duration-300">
+<i class="fa-solid fa-envelope text-white"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="py-12 bg-black border-t border-gray-800">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between">
+            <div class="mb-8 md:mb-0">
+                <div class="flex items-center gap-2 mb-4">
+                    <div>
+                        <img src="images/logo.png" alt="Nexera Logo" class="w-16 h-16 object-contain">
+                    </div>
+                </div>
+                <p class="text-gray-400 max-w-xs">Driving the future of digital transformation with innovative solutions.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-white font-bold mb-4">Navigation</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-primary transition-colors duration-300">Home</a></li>
+                        <li><a href="#achievements" class="text-gray-400 hover:text-primary transition-colors duration-300">Achievements</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-primary transition-colors duration-300">Services</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-primary transition-colors duration-300">Portfolio</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-primary transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#contact" onclick="scrollToContact(event)" class="text-gray-400 hover:text-primary transition-colors duration-300">Web Development</a></li>
+                        <li><a href="#contact" onclick="scrollToContact(event)" class="text-gray-400 hover:text-primary transition-colors duration-300">Mobile Apps</a></li>
+                        <li><a href="#contact" onclick="scrollToContact(event)" class="text-gray-400 hover:text-primary transition-colors duration-300">UI/UX Design</a></li>
+                        <li><a href="#contact" onclick="scrollToContact(event)" class="text-gray-400 hover:text-primary transition-colors duration-300">Digital Marketing</a></li>
+                        <li><a href="#contact" onclick="scrollToContact(event)" class="text-gray-400 hover:text-primary transition-colors duration-300">Consulting</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><button onclick="showLegalModal('privacy')" class="text-gray-400 hover:text-primary transition-colors duration-300">Privacy Policy</button></li>
+                        <li><button onclick="showLegalModal('terms')" class="text-gray-400 hover:text-primary transition-colors duration-300">Terms of Service</button></li>
+                        <li><button onclick="showLegalModal('cookie')" class="text-gray-400 hover:text-primary transition-colors duration-300">Cookie Policy</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-500 text-sm">© 2025 Nexera. All Rights Reserved.</p>
+            <div class="hidden md:flex space-x-4">
+                <a href="https://instagram.com/nexera.web/" target="_blank" class="text-gray-500 hover:text-primary transition-colors duration-300">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://tiktok.com/@nexera.official" target="_blank" class="text-gray-500 hover:text-primary transition-colors duration-300">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+                <a href="https://wa.me/201553763698" target="_blank" class="text-gray-500 hover:text-primary transition-colors duration-300">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="mailto:nexera.works@gmail.com" class="text-gray-500 hover:text-primary transition-colors duration-300">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Legal Modal -->
+<div id="legalModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+    <div class="glassmorphism rounded-lg max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto">
+        <div class="p-6">
+            <div class="flex justify-between items-center mb-6">
+                <h3 id="modalTitle" class="text-2xl font-bold text-gradient"></h3>
+                <button onclick="closeLegalModal()" class="text-gray-400 hover:text-white">
+                    <i class="fa-solid fa-xmark text-2xl"></i>
+                </button>
+            </div>
+            <div id="modalContent" class="prose prose-invert"></div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
